@@ -1,0 +1,32 @@
+﻿<Window x:Class="DiaryWorkouts.SearchWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SearchWindow" Height="600" Width="1024" ResizeMode="NoResize" FontFamily="Neris Thin">
+    <Grid>
+        <Grid x:Name="gridSearch" HorizontalAlignment="Left" Height="485" Margin="10,74,0,0" VerticalAlignment="Top" Width="996">
+            <Grid x:Name="gridLastWorkoutTemplate" Height="30" Margin="0,32,2,0" VerticalAlignment="Top" MouseLeftButtonDown="searchResult_MouseLeftButtonDown" Grid.ColumnSpan="2" >
+                <Label x:Name="labelWorkoutDateTemplate" Content="Понедельник 08.09.2014" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,2,0,0" Height="26" Width="150" Grid.Column="0" MouseLeftButtonDown="searchResult_MouseLeftButtonDown"/>
+                <Label x:Name="labelWorkoutWorkAndReultTemplate" Content="Бег 1000 метров 8 раз (3:05, 3:04, 3:03 ...), жим лёжа 60 кг 8х10, жим гантелей лежа 15 кг 6х10" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,2,0,0" Width="506" Height="26" MouseLeftButtonDown="searchResult_MouseLeftButtonDown"/>
+            </Grid>
+            <ScrollBar HorizontalAlignment="Right" VerticalAlignment="Top" Height="485" Width="17" HorizontalContentAlignment="Right" Margin="0,0,2,0"/>
+        </Grid>
+        <DataGrid x:Name="dataGridTableSearch" HorizontalAlignment="Left" Margin="10,79,0,0" VerticalAlignment="Top" Height="480" Width="996" FontSize="16"/>
+
+        <Grid HorizontalAlignment="Left" Height="24" Margin="10,10,0,0" VerticalAlignment="Top" Width="996">
+            <TextBox x:Name="textBoxSearch" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="245" VerticalContentAlignment="Center" Text="Поиск..." KeyUp="textBoxSearch_KeyUp" GotFocus="textBoxSearch_GotFocus" LostFocus="textBoxSearch_LostFocus"/>
+            <Button Content="По дате" HorizontalAlignment="Left" Margin="250,0,0,0" VerticalAlignment="Top" Width="52" Height="24"/>
+            <ComboBox x:Name="comboBoxWorkoutTypeSearch" HorizontalAlignment="Left" Margin="307,0,0,0" VerticalAlignment="Top" Width="112" SelectionChanged="comboBoxWorkoutTypeSearch_SelectionChanged"/>
+            <CheckBox x:Name="checkBoxKardio" Content="Кардио" HorizontalAlignment="Left" Margin="424,4,0,0" VerticalAlignment="Top" IsChecked="True" Checked="SearchCheckedChanged" Unchecked="SearchCheckedChanged"/>
+            <CheckBox x:Name="checkBoxHardWork" Content="Силовые" HorizontalAlignment="Left" Margin="488,4,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.18,0.8" IsChecked="True" Checked="SearchCheckedChanged" Unchecked="SearchCheckedChanged" FontFamily="Neris Thin"/>
+            <ComboBox x:Name="comboBoxWorkoutMusclesGroupSearch" HorizontalAlignment="Left" Margin="560,1,0,0" VerticalAlignment="Top" Width="109" SelectedIndex="0" Height="22" SelectionChanged="comboBoxWorkoutTypeSearch_SelectionChanged">
+                <ComboBoxItem Content=""/>
+            </ComboBox>
+            <Button x:Name="buttonSearch" Content="Найти" Margin="674,0,0,0" VerticalAlignment="Top" Height="24" Click="buttonSearch_Click"/>
+        </Grid>
+        <Grid x:Name="gridPages" HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="962" Margin="10,39,0,0">
+            <Label x:Name="labelPageTemplate" Content="99" HorizontalAlignment="Left" VerticalAlignment="Top" Height="34" Width="34" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="36,0,0,0" Background="#FFB7BFF3"/>
+            <Label x:Name="labelPagePrevious" Content="&lt;" HorizontalAlignment="Left" VerticalAlignment="Top" Height="34" Width="34" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFB7BFF3" FontFamily="Batang" MouseLeftButtonDown="viewPreviousPage_MouseLeftButtonDown"/>
+        </Grid>
+
+    </Grid>
+</Window>

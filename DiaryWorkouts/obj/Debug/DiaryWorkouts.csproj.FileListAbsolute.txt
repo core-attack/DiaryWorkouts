@@ -1,0 +1,90 @@
+c:\users\coreattack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\bin\Debug\DiaryWorkouts.exe.config
+c:\users\coreattack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\bin\Debug\DiaryWorkouts.exe
+c:\users\coreattack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\bin\Debug\DiaryWorkouts.pdb
+c:\users\coreattack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\DiaryWorkouts.csprojResolveAssemblyReference.cache
+c:\users\coreattack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\App.g.cs
+c:\users\coreattack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\DiaryWorkouts_MarkupCompile.cache
+c:\users\coreattack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\DiaryWorkouts.g.resources
+c:\users\coreattack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\DiaryWorkouts.Properties.Resources.resources
+c:\users\coreattack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\DiaryWorkouts.csproj.GenerateResource.Cache
+c:\users\coreattack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\DiaryWorkouts.exe
+c:\users\coreattack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\DiaryWorkouts.pdb
+c:\users\coreattack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\CoreAttack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\AdminWindow.baml
+C:\Users\CoreAttack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\AdminWindow.g.cs
+C:\Users\CoreAttack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\AccountWindow.baml
+C:\Users\CoreAttack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\AccountWindow.g.cs
+C:\Users\CoreAttack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\ToolsWindow.baml
+C:\Users\CoreAttack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\ToolsWindow.g.cs
+C:\Users\CoreAttack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\AddUserWindow.baml
+C:\Users\CoreAttack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\AddUserWindow.g.cs
+C:\Users\CoreAttack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\ImportWindow.baml
+C:\Users\CoreAttack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\ImportWindow.g.cs
+C:\Users\CoreAttack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\MainWindow.baml
+C:\Users\CoreAttack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\GeneralWindow.baml
+C:\Users\CoreAttack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\MainWindow.g.cs
+C:\Users\CoreAttack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\GeneralWindow.g.cs
+C:\Users\CoreAttack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\ExportWindow.baml
+C:\Users\CoreAttack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\ExportWindow.g.cs
+C:\Users\CoreAttack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\SearchWindow.baml
+C:\Users\CoreAttack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\SearchWindow.g.cs
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\CalenderUserControl.baml
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\CalenderUserControl.g.cs
+C:\Users\CoreAttack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\CoreAttack\documents\visual studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\obj\Debug\DiaryWorkouts_MarkupCompile.lref
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\bin\Debug\EntityFramework.dll
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\bin\Debug\System.Data.SQLite.dll
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\bin\Debug\System.Data.SQLite.pdb
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts\DiaryWorkouts\bin\Debug\System.Data.SQLite.EF6.pdb
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\bin\Debug\DiaryWorkouts.exe.config
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\DiaryWorkouts.exe
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\DiaryWorkouts.pdb
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP2\DiaryWorkouts\bin\Debug\DiaryWorkouts.exe.config
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP2\DiaryWorkouts\obj\Debug\DiaryWorkouts.exe
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP2\DiaryWorkouts\obj\Debug\DiaryWorkouts.pdb
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\DiaryWorkouts.csprojResolveAssemblyReference.cache
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\AccountWindow.baml
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\AddUserWindow.baml
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\AdminWindow.baml
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\CalenderUserControl.baml
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\ExportWindow.baml
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\ImportWindow.baml
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\MainWindow.baml
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\SearchWindow.baml
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\ToolsWindow.baml
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\AccountWindow.g.cs
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\AddUserWindow.g.cs
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\AdminWindow.g.cs
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\CalenderUserControl.g.cs
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\ExportWindow.g.cs
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\ImportWindow.g.cs
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\MainWindow.g.cs
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\GeneralWindow.g.cs
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\SearchWindow.g.cs
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\ToolsWindow.g.cs
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\App.g.cs
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\DiaryWorkouts_MarkupCompile.cache
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\DiaryWorkouts_MarkupCompile.lref
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\bin\Debug\DiaryWorkouts.exe
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\bin\Debug\DiaryWorkouts.pdb
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\bin\Debug\EntityFramework.dll
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\bin\Debug\System.Data.SQLite.dll
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\bin\Debug\System.Data.SQLite.pdb
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\bin\Debug\System.Data.SQLite.EF6.pdb
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\GeneralWindow.baml
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\DiaryWorkouts.g.resources
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\DiaryWorkouts.Properties.Resources.resources
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\DiaryWorkouts.csproj.GenerateResource.Cache
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\WorkoutPlanWindow.baml
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\WorkoutPlanWindow.g.cs
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\HorizontalCalenderUserControl.baml
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\HorizontalCalenderUserControl.g.cs
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\SQLWindow.baml
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\SQLWindow.g.cs
+C:\Users\CoreAttack\Documents\Visual Studio 2013\Projects\DiaryWorkouts ASP\DiaryWorkouts\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\CoreAttack\Documents\C#\DiaryWorkouts\DiaryWorkouts\bin\Debug\DiaryWorkouts.exe.config
+C:\Users\CoreAttack\Documents\C#\DiaryWorkouts\DiaryWorkouts\obj\Debug\DiaryWorkouts.exe
+C:\Users\CoreAttack\Documents\C#\DiaryWorkouts\DiaryWorkouts\obj\Debug\DiaryWorkouts.pdb

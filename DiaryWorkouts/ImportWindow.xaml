@@ -1,0 +1,14 @@
+﻿<Window x:Class="DiaryWorkouts.ImportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Импорт базы данных из старых версий приложения" Height="136.356" Width="522" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="Скопируйте файл базы данных в директорию" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelDirectoryImport" Content="Directory" HorizontalAlignment="Left" Margin="10,34,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.553,0.654"/>
+        <Button x:Name="buttonImport" Content="Импортировать" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="119" Height="30" Click="buttonImport_Click"/>
+        <Label x:Name="labelStatus" Content="Label" HorizontalAlignment="Left" Margin="134,67,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="buttonOpen" Content="Открыть" HorizontalAlignment="Left" Margin="385,67,0,0" VerticalAlignment="Top" Width="119" Height="30" IsEnabled="False"/>
+
+    </Grid>
+</Window>

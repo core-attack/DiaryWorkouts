@@ -1,0 +1,55 @@
+﻿<Window x:Class="DiaryWorkouts.AccountWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Дневник тренировок - Профиль" Height="401.78" Width="668.987" FontFamily="Neris Thin" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" FontSize="13">
+    <Grid Margin="0,0,-8,0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="Спортсмен" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Height="357" Width="312">
+
+            <Grid HorizontalAlignment="Left" Height="354" VerticalAlignment="Top" Width="326" Margin="-14,-19,-12,0">
+
+                <Label Content="Ф. И. О." HorizontalAlignment="Left" Margin="20,19,0,0" VerticalAlignment="Top" Width="55" Height="26"/>
+                <TextBox x:Name="tbName" HorizontalAlignment="Left" Height="23" Margin="20,45,0,0" TextWrapping="Wrap" Text="Пискарев Николай Сергеевич" VerticalAlignment="Top" Width="245" Padding="0" VerticalContentAlignment="Center"/>
+                <Label Content="Пол" Margin="0,19,23,0" HorizontalAlignment="Right" RenderTransformOrigin="0.994,1.071" VerticalAlignment="Top"/>
+                <ComboBox x:Name="cbSex" HorizontalAlignment="Left" Margin="270,45,0,0" VerticalAlignment="Top" Width="40" SelectedIndex="1">
+                    <ComboBoxItem Content="Ж"/>
+                    <ComboBoxItem Content="М"/>
+                </ComboBox>
+                <Label Content="Дата рождения" Margin="18,68,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="26"/>
+                <Label Content="Телефон" Margin="186,68,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBox x:Name="tbBDay" HorizontalAlignment="Left" Height="23" Margin="20,90,0,0" TextWrapping="Wrap" Text="08.09.1992" VerticalAlignment="Top" Width="100" VerticalContentAlignment="Center"/>
+                <TextBox x:Name="tbPhone" HorizontalAlignment="Left" Height="23" Margin="188,90,0,0" TextWrapping="Wrap" Text="+7 919 911 84 85" VerticalAlignment="Top" Width="123" VerticalContentAlignment="Center"/>
+                <Label Content="Адрес" Margin="18,162,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBox x:Name="tbAddress" HorizontalAlignment="Left" Height="23" Margin="20,184,0,0" TextWrapping="Wrap" Text="г. Ижевск, ул. Пушканская, 158, 31" VerticalAlignment="Top" Width="290" VerticalContentAlignment="Center"/>
+                <TextBox x:Name="tbPlace" HorizontalAlignment="Left" Height="23" Margin="20,233,0,0" TextWrapping="Wrap" Text="УдГУ" VerticalAlignment="Top" Width="290" VerticalContentAlignment="Center"/>
+                <Label Content="Место учёбы / работы" Margin="15,211,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <Button x:Name="buttonOpenCalender" Content="&gt;" HorizontalAlignment="Left" Margin="125,90,0,0" VerticalAlignment="Top" Width="27" Height="23" Click="buttonOpenCalender_Click"/>
+                <Label Content="Вид спорта" Margin="18,113,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <ComboBox x:Name="cbSportType" HorizontalAlignment="Left" Height="23" Margin="20,135,0,0"  VerticalAlignment="Top" Width="132" VerticalContentAlignment="Center"/>
+                <ComboBox x:Name="cbSportCategory" HorizontalAlignment="Left" Height="23" Margin="188,135,0,0"   VerticalAlignment="Top" Width="123" VerticalContentAlignment="Center"/>
+                <Label Content="Разряд" Margin="186,113,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <Label Content="Логин" HorizontalAlignment="Left" Margin="18,256,0,0" VerticalAlignment="Top"/>
+                <Label Content="Пароль" HorizontalAlignment="Left" Margin="18,301,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.065,0.593"/>
+                <TextBox x:Name="tbLogin" HorizontalAlignment="Left" Height="23" Margin="20,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132"/>
+                <PasswordBox x:Name="tbPassword" HorizontalAlignment="Left" Height="23" Margin="20,323,0,0" VerticalAlignment="Top" Width="132"/>
+                <Label Content="Подтверждение" HorizontalAlignment="Left" Margin="186,301,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.065,0.593"/>
+                <PasswordBox x:Name="tbConfirmation" HorizontalAlignment="Left" Height="23" Margin="188,323,0,0" VerticalAlignment="Top" Width="122"/>
+            </Grid>
+        </GroupBox>
+        <Grid HorizontalAlignment="Left" Height="163" VerticalAlignment="Top" Width="329" Margin="325,0,0,0">
+            <Label x:Name="labelCoachName" Content="Ф. И. О." HorizontalAlignment="Left" Margin="18,22,0,0" VerticalAlignment="Top" Width="51" Height="23"/>
+            <TextBox x:Name="tbCoachName" HorizontalAlignment="Left" Height="23" Margin="20,45,0,0" TextWrapping="Wrap" Text="Вахрушев Леонид Анатольевич" VerticalAlignment="Top" Width="291" Padding="0" VerticalContentAlignment="Center"/>
+            <Label x:Name="labelCoachBDay" Content="Дата рождения" Margin="18,68,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="26"/>
+            <Label x:Name="labelCoachPhone" Content="Телефон" Margin="186,68,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBox x:Name="tbCoachBDay" HorizontalAlignment="Left" Height="23" Margin="20,90,0,0" TextWrapping="Wrap" Text="08.09.1992" VerticalAlignment="Top" Width="100" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="tbCoachPhone" HorizontalAlignment="Left" Height="23" Margin="188,90,0,0" TextWrapping="Wrap" Text="+7 912 852 76 27" VerticalAlignment="Top" Width="123" VerticalContentAlignment="Center"/>
+            <GroupBox Header="Тренер" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Height="121" Width="314"/>
+            <Button x:Name="buttonAddCoach" Content="Добавить тренера" HorizontalAlignment="Left" Margin="10,132,0,0" VerticalAlignment="Top" Width="314" Height="23"/>
+        </Grid>
+        <Button x:Name="buttonSave" Content="Сохранить изменения" HorizontalAlignment="Left" Margin="340,328,0,0" VerticalAlignment="Top" Width="314" Height="23" IsTabStop="False" Click="buttonSave_Click"/>
+        <Calendar x:Name="calendar" HorizontalAlignment="Left" Margin="156,87,0,0" VerticalAlignment="Top" Visibility="Hidden" SelectedDatesChanged="calendar_SelectedDatesChanged"/>
+
+    </Grid>
+</Window>

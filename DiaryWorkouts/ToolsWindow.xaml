@@ -1,0 +1,47 @@
+﻿<Window x:Class="DiaryWorkouts.ToolsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Дневник тренировок - Настройки" Height="631.878" Width="1170.828" WindowStartupLocation="CenterOwner" FontFamily="Neris Thin" ResizeMode="NoResize">
+    <Grid>
+        <Button x:Name="buttonAddUser" Content="Добавить пользователя" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="144" Click="buttonAddUser_Click" />
+        <Button x:Name="buttonShowTables" Content="Показать таблицы" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="144" Click="buttonShowTables_Click"/>
+        <Button x:Name="buttonImport" Content="Импорт базы данных" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" Width="144" Click="buttonImport_Click"/>
+        <Button x:Name="buttonExport" Content="Экспорт базы данных" HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top" Width="144" Click="buttonExport_Click"/>
+        <Grid x:Name="gridReferenceBooks" HorizontalAlignment="Left" Height="345" Margin="570,5,0,253" Width="278">
+            <GroupBox Header="Справочники" Margin="0,0,-1,0" Height="335" Width="279"/>
+            <ComboBox x:Name="comboBoxReferenceBook" HorizontalAlignment="Left" Margin="10,23,0,0" VerticalAlignment="Top" Width="258" SelectionChanged="comboBoxReferenceBook_SelectionChanged" GotFocus="comboBoxReferenceBook_GotFocus"/>
+            <ListBox x:Name="listBoxReferenceBookValues" Height="226" Margin="10,50,10,69" Width="258"/>
+            <TextBox x:Name="textBoxReferenceBookAddValue" HorizontalAlignment="Left" Height="23" Margin="12,0,0,41" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="176" VerticalContentAlignment="Center"/>
+            <Button x:Name="buttonAdd" Content="Добавить" HorizontalAlignment="Left" Margin="193,0,0,41" VerticalAlignment="Bottom" Width="75" Height="23" Click="buttonAdd_Click"/>
+            <ComboBox x:Name="comboBoxSportTypes" HorizontalAlignment="Left" Margin="12,0,0,14" VerticalAlignment="Bottom" Width="256"/>
+
+        </Grid>
+        <GroupBox Header="Время" HorizontalAlignment="Left" Height="73" Margin="159,101,0,0" VerticalAlignment="Top" Width="278">
+            <Grid HorizontalAlignment="Left" Height="62" Margin="3,0,0,0" VerticalAlignment="Top" Width="259">
+                <TextBox x:Name="tb1" HorizontalAlignment="Left" Height="23" Margin="8,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+                <TextBox x:Name="tb2" HorizontalAlignment="Left" Height="23" Margin="144,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+                <Button Content="&gt;&gt;" HorizontalAlignment="Left" Margin="114,26,0,0" VerticalAlignment="Top" Width="24" RenderTransformOrigin="-0.6,-0.45" Click="Button_Click" Height="23" VerticalContentAlignment="Center"/>
+                <Label Content="Перевод форматов времени в стандартный" HorizontalAlignment="Left" Margin="0,0,-22,0" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Текущий план тренировок" HorizontalAlignment="Left" Margin="159,10,0,0" VerticalAlignment="Top" Height="86" Width="406">
+            <Grid Height="Auto" Width="Auto" Margin="0,0,-2,-12">
+                <ComboBox x:Name="comboBoxCurrentWorkoutPlan" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="300" SelectionChanged="comboBoxCurrentWorkoutPlan_SelectionChanged"/>
+                <Button x:Name="buttonCurrentWorkoutPlanSet" Content="Установить" HorizontalAlignment="Left" Margin="315,10,0,0" VerticalAlignment="Top" Width="75" Height="22" Click="buttonCurrentWorkoutPlanSet_Click"/>
+                <Label x:Name="labelCurrentWorkoutPlan" Content="Автоматически загружаемый план не выбран" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Width="380" />
+            </Grid>
+        </GroupBox>
+        <Button Content="Изменение данных в БД" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top" Width="144" Click="Button_Click_2"/>
+        <Button x:Name="buttonSQLConsole" Content="SQL консоль" HorizontalAlignment="Left" Margin="10,135,0,0" VerticalAlignment="Top" Width="144" Click="buttonSQLConsole_Click"/>
+        <GroupBox Header="Изменение времени тренировки по умолчанию" HorizontalAlignment="Left" Margin="159,190,0,0" VerticalAlignment="Top" Height="97" Width="305">
+            <Grid HorizontalAlignment="Left" Margin="0,0,0,5" Width="301">
+                <Label Content="Начало тренировки" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Label Content="Окончание тренировки" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="textBoxDefaultStartTime" HorizontalAlignment="Left" Height="23" Margin="147,10,0,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Top" Width="64" KeyDown="textBoxDefaultEndTimeHour_KeyDown" HorizontalContentAlignment="Center" PreviewTextInput="textBoxDefaultStartTime_PreviewTextInput"/>
+                <TextBox x:Name="textBoxDefaultEndTime" HorizontalAlignment="Left" Height="23" Margin="147,41,0,0" TextWrapping="Wrap" Text="00" VerticalAlignment="Top" Width="64" KeyDown="textBoxDefaultEndTimeHour_KeyDown" HorizontalContentAlignment="Center" PreviewTextInput="textBoxDefaultStartTime_PreviewTextInput"/>
+                <Button x:Name="buttonUpdateDefaultTimeOfWorkout" Content="Применить" HorizontalAlignment="Left" Margin="216,10,0,0" VerticalAlignment="Top" Width="73" Height="54" Click="buttonUpdateDefaultTimeOfWorkout_Click" RenderTransformOrigin="2.344,-0.864"/>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>

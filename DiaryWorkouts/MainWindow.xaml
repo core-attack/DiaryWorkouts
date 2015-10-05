@@ -1,0 +1,18 @@
+﻿<Window x:Class="DiaryWorkouts.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Дневник тренировок - Добро пожаловать!" Height="183.904" Width="447.945" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid OverridesDefaultStyle="True">
+        <Label Content="Пожалуйста, авторизуйтесь!" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"  FontFamily="Neris Thin" FontSize="13"/>
+        <PasswordBox x:Name="passwordBoxPassword" HorizontalAlignment="Left" Margin="70,75,0,0" VerticalAlignment="Top" Width="165" Height="28" PasswordChar="●" Password="P@ssw0rd" VerticalContentAlignment="Center" FontFamily="Neris Thin"/>
+        <TextBox x:Name="textBoxLogin" HorizontalAlignment="Left" Height="28" Margin="70,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" VerticalContentAlignment="Center" Text="core-attack"  FontSize="13" FontFamily="Neris Thin"/>
+        <Label Content="Логин" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top"  FontFamily="Neris Thin" FontSize="13"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top"  FontSize="13" FontFamily="Neris Thin"/>
+        <Label HorizontalAlignment="Left" Margin="240,36,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.082,0.197"/>
+        <Label x:Name="labelLoginStatus" Content="Пользователя не найдено" HorizontalAlignment="Left" Margin="240,38,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="labelLoginStatus_Copy" Content="Неверный пароль" HorizontalAlignment="Left" Margin="240,74,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Button x:Name="buttonSignIn" Content="Авторизация" HorizontalAlignment="Left" Margin="70,108,0,0" VerticalAlignment="Top" Width="165" Height="28" Click="buttonSignIn_Click"  FontFamily="Neris Thin" FontSize="13"/>
+        <Button x:Name="buttonSignUp" Content="Регистрация" HorizontalAlignment="Left" Margin="240,108,0,0" VerticalAlignment="Top" Width="165" Height="28" Click="buttonSignUp_Click"  FontSize="13" FontFamily="Neris Thin"/>
+
+    </Grid>
+</Window>

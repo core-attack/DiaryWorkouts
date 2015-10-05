@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="DiaryWorkouts.HorizontalCalenderUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Height="122" Width="829.37">
+    <Grid Margin="0,0,0,-13">
+        <Grid x:Name="gridCalender" HorizontalAlignment="Left" Height="122" VerticalAlignment="Top" Width="819" MouseEnter="gridCalender_MouseEnter" MouseWheel="gridCalender_MouseWheel" Margin="10,0,0,0">
+            <Label x:Name="buttonPrevious" Content="&lt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.607,0.947" Height="34" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FF5EB67E" FontFamily="Neris Thin" MouseUp="ScrollCalenderDatesLeft"/>
+            <Label x:Name="buttonNext" Content="&gt;" Margin="0,0,4,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="34" HorizontalAlignment="Right" Width="34" FontFamily="Neris Thin" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FF67B68A" MouseUp="ScrollCalenderDatesRight"/>
+            <Grid x:Name="gridDayTemplate" HorizontalAlignment="Left" Height="80" Margin="0,38,0,0" VerticalAlignment="Top" Width="34">
+                <Label x:Name="labelWeekDay" Content="ПН" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Black" BorderBrush="Black" Background="{DynamicResource {x:Static SystemColors.ScrollBarBrushKey}}" Width="34" Height="34" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Neris Thin" MouseRightButtonUp="labelWeekDay_MouseRightButtonUp"/>
+                <Label x:Name="labelDay" Content="00" HorizontalAlignment="Left" Margin="0,38,0,0" VerticalAlignment="Top" Foreground="Black" BorderBrush="Black" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Width="34" HorizontalContentAlignment="Center" Height="34" VerticalContentAlignment="Center" FontFamily="Neris Thin"/>
+                <Label x:Name="labelEventExist" Content="" HorizontalAlignment="Left" Margin="0,68,0,0" VerticalAlignment="Top" Height="4" Width="34" Background="#FFFEBB08" />
+                <Label x:Name="labelHardWorkExist" Content="" HorizontalAlignment="Left" Margin="17,68,0,0" VerticalAlignment="Top" Height="4" Width="17" Background="#FF60DB0F"/>
+                <Label x:Name="labelKardioExist" Content="" HorizontalAlignment="Left" Margin="0,68,0,0" VerticalAlignment="Top" Height="4" Width="17" Background="#FF087AFE" />
+            </Grid>
+            <Label x:Name="labelMonthPrevious" Content="Декабрь" HorizontalAlignment="Left" Margin="38,0,0,0" VerticalAlignment="Top" Height="33" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Neris Thin" MouseUp="labelMonthNext_MouseUp"/>
+            <Label x:Name="labelMonthNext" Content="Январь" HorizontalAlignment="Right" Margin="0,0,43,0" VerticalAlignment="Top" FontFamily="Neris Thin" Height="33" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MouseUp="labelMonthNext_MouseUp"/>
+            <Label x:Name="labelMonth" Content="Сентябрь" Margin="359,1,360,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="100" Height="33" FontFamily="Neris Thin" Focusable="True" RenderTransformOrigin="0.018,0.515" FontSize="17"/>
+        </Grid>
+
+    </Grid>
+</UserControl>

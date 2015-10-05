@@ -1,0 +1,16 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:DiaryWorkouts" x:Class="DiaryWorkouts.AdminWindow"
+        Title="Дневник тренировок - Административная панель" Height="451" Width="547" WindowStartupLocation="CenterOwner" FontFamily="Neris Thin">
+    <Grid>
+        <ComboBox x:Name="comboBoxTables" Width="263" VerticalContentAlignment="Stretch" VerticalAlignment="Top" HorizontalContentAlignment="Stretch" SelectionChanged="comboBoxTables_SelectionChanged" HorizontalAlignment="Left" TabIndex="1" GotKeyboardFocus="comboBoxTables_GotKeyboardFocus" GotMouseCapture="comboBoxTables_GotMouseCapture"/>
+        <DataGrid x:Name="TableDB" Margin="0,22" SelectionChanged="TableDB_SelectionChanged" CellEditEnding="TableDB_CellEditEnding"/>
+        <Button x:Name="buttonAdd" Content="Добавить запись" VerticalAlignment="Bottom" Width="263" Height="22" Margin="263,0,0,0" HorizontalAlignment="Right" Click="buttonAdd_Click"/>
+        <Button x:Name="buttonDelete" Content="Удалить запись" VerticalAlignment="Bottom" Width="263" Height="22" Margin="0,0,263,0" HorizontalAlignment="Left" Click="buttonDelete_Click"/>
+        <TextBox x:Name="tbSearch" HorizontalAlignment="Right" Height="23" Margin="263,-1,0,0" TextWrapping="Wrap" Text="Поиск..." VerticalAlignment="Top" Width="263" FontStyle="Italic" ForceCursor="True" TextChanged="tbSearch_TextChanged" TabIndex="2" GotMouseCapture="tbSearch_GotMouseCapture" GotKeyboardFocus="tbSearch_GotKeyboardFocus"/>
+
+        <local:CalenderUserControl HorizontalAlignment="Left" Margin="583,28,-144,0" VerticalAlignment="Top" Width="100"/>
+
+    </Grid>
+</Window>
