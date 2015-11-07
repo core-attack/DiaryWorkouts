@@ -1,19 +1,19 @@
 ﻿<Window x:Class="DiaryWorkouts.ToolsWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Дневник тренировок - Настройки" Height="631.878" Width="1170.828" WindowStartupLocation="CenterOwner" FontFamily="Neris Thin" ResizeMode="NoResize">
-    <Grid>
+        Title="Дневник тренировок - Настройки" Height="326.803" Width="860.38" WindowStartupLocation="CenterOwner" FontFamily="Neris Thin" ResizeMode="NoResize">
+    <Grid Height="292" VerticalAlignment="Top" Margin="0,0,4,0">
         <Button x:Name="buttonAddUser" Content="Добавить пользователя" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="144" Click="buttonAddUser_Click" />
         <Button x:Name="buttonShowTables" Content="Показать таблицы" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="144" Click="buttonShowTables_Click"/>
         <Button x:Name="buttonImport" Content="Импорт базы данных" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" Width="144" Click="buttonImport_Click"/>
         <Button x:Name="buttonExport" Content="Экспорт базы данных" HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top" Width="144" Click="buttonExport_Click"/>
-        <Grid x:Name="gridReferenceBooks" HorizontalAlignment="Left" Height="345" Margin="570,5,0,253" Width="278">
-            <GroupBox Header="Справочники" Margin="0,0,-1,0" Height="335" Width="279"/>
+        <Grid x:Name="gridReferenceBooks" HorizontalAlignment="Left" Height="282" Margin="570,5,0,0" Width="278" VerticalAlignment="Top">
+            <GroupBox Header="Справочники" Margin="0,0,-1,0" Width="279"/>
             <ComboBox x:Name="comboBoxReferenceBook" HorizontalAlignment="Left" Margin="10,23,0,0" VerticalAlignment="Top" Width="258" SelectionChanged="comboBoxReferenceBook_SelectionChanged" GotFocus="comboBoxReferenceBook_GotFocus"/>
-            <ListBox x:Name="listBoxReferenceBookValues" Height="226" Margin="10,50,10,69" Width="258"/>
-            <TextBox x:Name="textBoxReferenceBookAddValue" HorizontalAlignment="Left" Height="23" Margin="12,0,0,41" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="176" VerticalContentAlignment="Center"/>
+            <ListBox x:Name="listBoxReferenceBookValues" Margin="10,50,10,69" Width="258"/>
+            <TextBox x:Name="textBoxReferenceBookAddValue" HorizontalAlignment="Left" Height="23" Margin="10,0,0,41" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="176" VerticalContentAlignment="Center"/>
             <Button x:Name="buttonAdd" Content="Добавить" HorizontalAlignment="Left" Margin="193,0,0,41" VerticalAlignment="Bottom" Width="75" Height="23" Click="buttonAdd_Click"/>
-            <ComboBox x:Name="comboBoxSportTypes" HorizontalAlignment="Left" Margin="12,0,0,14" VerticalAlignment="Bottom" Width="256"/>
+            <ComboBox x:Name="comboBoxSportTypes" HorizontalAlignment="Left" Margin="10,0,0,14" VerticalAlignment="Bottom" Width="258"/>
 
         </Grid>
         <GroupBox Header="Время" HorizontalAlignment="Left" Height="73" Margin="159,101,0,0" VerticalAlignment="Top" Width="278">

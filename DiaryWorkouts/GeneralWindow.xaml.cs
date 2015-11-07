@@ -225,16 +225,7 @@ namespace DiaryWorkouts
         /// Массив всех силовых работ
         /// </summary>
         List<string> AllHardWorkWork = new List<string>();
-        #region для скроллинга работ
-        // Used when manually scrolling.
-        private Point scrollTarget;
-        private Point scrollStartPoint;
-        private Point scrollStartOffset;
-        private Point previousPoint;
-        private Vector velocity;
-        private double friction;
-        private DispatcherTimer animationTimer = new DispatcherTimer();
-        #endregion
+        
         public MainWindow(long userId)
         {
             InitializeComponent();

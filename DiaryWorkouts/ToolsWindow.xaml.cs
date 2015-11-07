@@ -269,6 +269,7 @@ namespace DiaryWorkouts
                 sqlite.AddWorkoutPlanType(wt);
             }
             SetAllValuesToListBox();
+            textBoxReferenceBookAddValue.Text = "";
         }
 
         private void comboBoxReferenceBook_GotFocus(object sender, RoutedEventArgs e)
