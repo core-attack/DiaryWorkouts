@@ -10,9 +10,7 @@
                 <Label Content="Дистанция" HorizontalAlignment="Left" Margin="47,58,0,0" VerticalAlignment="Top" Width="234" HorizontalContentAlignment="Center" FontFamily="Neris Thin"/>
                 <Label Content="Время" HorizontalAlignment="Left" Margin="286,57,0,0" VerticalAlignment="Top" Width="68" HorizontalContentAlignment="Center" FontFamily="Neris Thin"/>
                 <Grid x:Name="gridWorks" HorizontalAlignment="Left" Height="278" Margin="10,83,0,0" VerticalAlignment="Top" Width="395" ClipToBounds="True">
-                    <ScrollBar x:Name="scrollBarWork" HorizontalAlignment="Right" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Right" ValueChanged="scrollBarWork_ValueChanged" Margin="0,0,1,0" />
-
-                    <Grid x:Name="gridWorkTemplate" HorizontalAlignment="Left" Height="55" Margin="0,3,0,0" VerticalAlignment="Top" Width="372" ClipToBounds="True" MouseWheel="gridWorkTemplate_MouseWheel">
+                    <Grid x:Name="gridWorkTemplate" HorizontalAlignment="Left" Height="55" Margin="0,3,0,0" VerticalAlignment="Top" Width="372" ClipToBounds="True">
                         <ComboBox x:Name="comboBoxWorkDistance" HorizontalAlignment="Left" Margin="28,0,0,0" VerticalAlignment="Top" Width="235" SelectedIndex="0" Height="23" VerticalContentAlignment="Center" FontFamily="Neris Thin" FontSize="13">
                             <ComboBoxItem Content="Бег с препятствиями 3000 м"/>
                         </ComboBox>
@@ -22,6 +20,10 @@
                         <Button x:Name="buttonWorkAddComment" Content="↓" Margin="349,0,0,0" FontSize="11" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="23" RenderTransformOrigin="0.174,-0.696" Height="23" VerticalAlignment="Top" Click="buttonWorkAddComment_Click" FontFamily="Neris Thin"/>
                         <TextBox x:Name="textBoxComboBoxSearch" HorizontalAlignment="Left" Height="23" Margin="1,32,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="371"/>
                     </Grid>
+                    <ScrollViewer x:Name="scrollViewerKardioWorks">
+                        <ItemsControl x:Name="itemsControlKardioWorks" VerticalAlignment="Center">
+                        </ItemsControl>
+                    </ScrollViewer>
                 </Grid>
                 <Button x:Name="buttonWorkAdd" Content="+" HorizontalAlignment="Left" Margin="359,58,0,0" VerticalAlignment="Top" Width="23" Height="23" FontSize="11" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="buttonWorkAdd_Click" FontFamily="Neris Thin"/>
                 <Label Content="Кардио" HorizontalAlignment="Left" VerticalAlignment="Top" Width="405" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Neris Thin" VerticalContentAlignment="Center"/>
@@ -40,8 +42,7 @@
                 <Label Content="Силовая " HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Neris Thin" VerticalContentAlignment="Center"/>
                 <Button x:Name="buttonHardWorkAdd" Content="+" HorizontalAlignment="Left" Margin="351,30,0,0" VerticalAlignment="Top" Width="23" Height="23" FontSize="11" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="buttonHardWorkAdd_Click" FontFamily="Neris Thin"/>
                 <Grid x:Name="gridHardWorks" HorizontalAlignment="Left" Height="304" Margin="6,58,0,0" VerticalAlignment="Top" Width="389" ClipToBounds="True">
-                    <ScrollBar x:Name="scrollBarHardWork" HorizontalAlignment="Right" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Right" ValueChanged="scrollBarHardWork_ValueChanged"/>
-                    <Grid x:Name="gridHardWorkTemplate" HorizontalAlignment="Left" Height="84" VerticalAlignment="Top" Width="372" MouseWheel="gridHardWorkTemplate_MouseWheel">
+                    <Grid x:Name="gridHardWorkTemplate" HorizontalAlignment="Left" Height="84" VerticalAlignment="Top" Width="372">
                         <Button x:Name="buttonHardWorkDelete" Content="×" HorizontalAlignment="Left" VerticalAlignment="Top" Width="23" Height="23" FontSize="11" Click="buttonHardWorkDelete_Click" FontFamily="Neris Thin" />
                         <Label x:Name="labelHardWork" Content="Французский жим гантели из-за головы 8 x 15-20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="28,0,0,0"/>
                         <TextBox x:Name="textBoxWeight" HorizontalAlignment="Left" Height="23" Margin="28,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" ToolTip="Вес" VerticalContentAlignment="Center" TextChanged="textBoxWeightAndRepeat_TextChanged" PreviewTextInput="textBoxWeight_PreviewTextInput" Text="Вес" Foreground="#FFA09B9B" FontStyle="Italic" GotFocus="textBoxWeight_GotFocus" LostFocus="textBoxWeight_LostFocus" />
@@ -51,6 +52,10 @@
                         <ComboBox x:Name="comboBoxHardWorks" Margin="28,0,0,0" VerticalAlignment="Top" Height="23" HorizontalAlignment="Left" Width="339" VerticalContentAlignment="Center" FontFamily="Neris Thin" FontSize="13"/>
                         <Button x:Name="buttonHardWorkAddComment" Content="↓" Margin="344,28,0,0" FontSize="11" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="23" RenderTransformOrigin="0.174,-0.696" Height="23" VerticalAlignment="Top" Click="buttonWorkAddComment_Click"/>
                     </Grid>
+                    <ScrollViewer x:Name="scrollViewerHardWorks">
+                        <ItemsControl x:Name="itemsControlHardWorks" VerticalAlignment="Center">
+                        </ItemsControl>
+                    </ScrollViewer>
                 </Grid>
                 <ComboBox x:Name="comboBoxWorkoutMusclesGroup" HorizontalAlignment="Left" Margin="6,30,0,0" VerticalAlignment="Top" Width="167" SelectedIndex="0" Height="23" FontSize="13" VerticalContentAlignment="Center" FontFamily="Neris Thin" SelectionChanged="comboBoxWorkoutMusclesGroup_SelectionChanged">
                     <ComboBoxItem Content=""/>

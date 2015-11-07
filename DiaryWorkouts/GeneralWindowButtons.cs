@@ -73,17 +73,9 @@ namespace DiaryWorkouts
             {
                 if (((Button)sender).Parent is Grid)
                 {
-                    if (((Button)sender).Parent is Grid)
-                    {
-                        if (((Grid)((Grid)((Button)sender).Parent).Parent).Children.Contains(((Grid)((Button)sender).Parent)))
-                        {
-                            byte number = GetNumberOfGrid(((Grid)((Button)sender).Parent));
-                            ((Grid)((Grid)((Button)sender).Parent).Parent).Children.Remove(((Grid)((Button)sender).Parent));
-                            if (countHardWorks > 0)
-                                countHardWorks--;
-                            RebuildGridHardWorks(number);
-                        }
-                    }
+                    itemsControlHardWorks.Items.Remove(((Button)sender).Parent);
+                    if (countHardWorks > 0)
+                        countHardWorks--;
                 }
             }
         }
@@ -156,17 +148,9 @@ namespace DiaryWorkouts
             {
                 if (((Button)sender).Parent is Grid)
                 {
-                    if (((Button)sender).Parent is Grid)
-                    {
-                        if (((Grid)((Grid)((Button)sender).Parent).Parent).Children.Contains(((Grid)((Button)sender).Parent)))
-                        {
-                            byte number = GetNumberOfGrid(((Grid)((Button)sender).Parent));
-                            ((Grid)((Grid)((Button)sender).Parent).Parent).Children.Remove(((Grid)((Button)sender).Parent));
-                            if (countWorks > 0)
-                                countWorks--;
-                            RebuildGridWorks(number);
-                        }
-                    }
+                    itemsControlKardioWorks.Items.Remove(((Button)sender).Parent);
+                    if (countWorks > 0)
+                        countWorks--;
                 }
             }
         }

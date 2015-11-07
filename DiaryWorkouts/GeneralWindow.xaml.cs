@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using DiaryWorkouts.BaseClasses;
 using DiaryWorkouts.DataBase;
 using DiaryWorkouts.ReferenceBooks;
+using System.Windows.Threading;
 
 namespace DiaryWorkouts
 {
@@ -224,6 +225,16 @@ namespace DiaryWorkouts
         /// Массив всех силовых работ
         /// </summary>
         List<string> AllHardWorkWork = new List<string>();
+        #region для скроллинга работ
+        // Used when manually scrolling.
+        private Point scrollTarget;
+        private Point scrollStartPoint;
+        private Point scrollStartOffset;
+        private Point previousPoint;
+        private Vector velocity;
+        private double friction;
+        private DispatcherTimer animationTimer = new DispatcherTimer();
+        #endregion
         public MainWindow(long userId)
         {
             InitializeComponent();
@@ -330,6 +341,7 @@ namespace DiaryWorkouts
 
             textBoxWorkoutTimeBegin.Text = sqlite.GetDefaultWorkoutsStartDate();
             textBoxWorkoutTimeEnd.Text = sqlite.GetDefaultWorkoutsEndDate();
+
         }
         
         /// <summary>
@@ -344,7 +356,6 @@ namespace DiaryWorkouts
                 newWork.Margin = new Thickness(gridWorkTemplate.Margin.Left, gridWorkTemplate.Margin.Top, gridWorkTemplate.Margin.Right, gridWorkTemplate.Margin.Bottom);
                 newWork.ClipToBounds = true;
                 newWork.ContextMenu = gridWorkTemplate.ContextMenu;
-                newWork.MouseWheel += gridWorkTemplate_MouseWheel;
 
                 Button newButtonDelete = new Button();
                 newButtonDelete.Name = buttonWorkDelete.Name + "_" + countWorks;
@@ -436,56 +447,16 @@ namespace DiaryWorkouts
                 newWork.Children.Add(newTextBoxComment);
                 newWork.Children.Add(newButtonAddComment);
 
-                if (countWorks != 0)
-                    newWork.Margin = new Thickness(newWork.Margin.Left, lastAddedWork.Margin.Top + WORK_STEP, newWork.Margin.Right, newWork.Margin.Bottom);
-
                 lastAddedWork = newWork;
-                gridWorks.Children.Add(newWork);
+                itemsControlKardioWorks.Items.Add(newWork);
                 countWorks++;
-                scrollBarWork.SmallChange = 1.0;
-                scrollBarWork.Maximum = countWorks - 7;
             }
             catch (Exception e)
             {
                 ErrorsHandler.ShowError(e);
             }
         }
-        /// <summary>
-        /// Поднимает вверх все гриды с работами на место удаленной
-        /// </summary>
-        /// <param name="number">Порядковый номер удаленной работы</param>
-        private void RebuildGridWorks(byte deleted)
-        {
-            byte current = 0;
-            foreach (object g in gridWorks.Children)
-            {
-                if (g is Grid)
-                {
-                    current = GetNumberOfGrid(((Grid)g));
-                    if (current > deleted && current != 255)
-                        if (((Grid)g).Margin != gridWorkTemplate.Margin)
-                            ((Grid)g).Margin = new Thickness(((Grid)g).Margin.Left, ((Grid)g).Margin.Top - WORK_STEP, ((Grid)g).Margin.Right, ((Grid)g).Margin.Bottom);
-                }
-            }
-        }
-        /// <summary>
-        /// Поднимает вверх все гриды с работами на место удаленной
-        /// </summary>
-        /// <param name="number">Порядковый номер удаленной работы</param>
-        private void RebuildGridHardWorks(byte deleted)
-        {
-            byte current = 0;
-            foreach (object g in gridHardWorks.Children)
-            {
-                if (g is Grid)
-                {
-                    current = GetNumberOfGrid(((Grid)g));
-                    if (current > deleted && current != 255)
-                        if (((Grid)g).Margin != gridWorkTemplate.Margin)
-                            ((Grid)g).Margin = new Thickness(((Grid)g).Margin.Left, ((Grid)g).Margin.Top - HARD_WORK_STEP, ((Grid)g).Margin.Right, ((Grid)g).Margin.Bottom);
-                }
-            }
-        }
+        
         /// <summary>
         /// Возвращает порядковый номер грида (для работы и силовой работы)
         /// </summary>
@@ -495,6 +466,7 @@ namespace DiaryWorkouts
         {
             return g.Name.Split(gridIdSeparator).Length > 1 ? byte.Parse(g.Name.Split(gridIdSeparator)[1]) : (byte)255;
         }
+
         /// <summary>
         /// Возвращает порядковый номер грида (для работы и силовой работы)
         /// </summary>
@@ -520,7 +492,6 @@ namespace DiaryWorkouts
                 Grid newHardWork = new Grid();
                 newHardWork.Name = gridHardWorkTemplate.Name + "_" + countHardWorks;
                 newHardWork.Margin = new Thickness(gridHardWorkTemplate.Margin.Left, gridHardWorkTemplate.Margin.Top, gridHardWorkTemplate.Margin.Right, gridHardWorkTemplate.Margin.Bottom);
-                newHardWork.MouseWheel += gridHardWorkTemplate_MouseWheel;
 
                 Button newButtonDelete = new Button();
                 newButtonDelete.Name = buttonHardWorkDelete.Name + "_" + countHardWorks;
@@ -648,16 +619,15 @@ namespace DiaryWorkouts
                 newHardWork.Children.Add(newTextBoxHardWorkComment);
                 newHardWork.Children.Add(newButtonAddComment);
 
-                if (countHardWorks != 0)
-                {
-                    newHardWork.Margin = new Thickness(newHardWork.Margin.Left, lastAddedHardWork.Margin.Top + HARD_WORK_STEP, newHardWork.Margin.Right, newHardWork.Margin.Bottom);
-                }
+                //if (countHardWorks != 0)
+                //{
+                //    newHardWork.Margin = new Thickness(newHardWork.Margin.Left, lastAddedHardWork.Margin.Top + HARD_WORK_STEP, newHardWork.Margin.Right, newHardWork.Margin.Bottom);
+                //}
 
                 lastAddedHardWork = newHardWork;
-                gridHardWorks.Children.Add(newHardWork);
+                //gridHardWorks.Children.Add(newHardWork);
+                itemsControlHardWorks.Items.Add(newHardWork);
                 countHardWorks++;
-                scrollBarHardWork.Maximum = countHardWorks - 4;
-                scrollBarHardWork.SmallChange = 1;
             }
             catch (Exception e)
             {
@@ -691,7 +661,7 @@ namespace DiaryWorkouts
                     string result = "";
                     string comment = "";
                     bool ok = false;
-                    foreach (object ob in gridWorks.Children)
+                    foreach (object ob in itemsControlKardioWorks.Items)
                     {
                         ok = false;
                         if (ob is Grid)
@@ -741,7 +711,7 @@ namespace DiaryWorkouts
                     string repeat = "";
                     string commentHardWork = "";
                     ok = false;
-                    foreach (object ob in gridHardWorks.Children)
+                    foreach (object ob in itemsControlHardWorks.Items)
                     {
                         ok = false;
                         if (ob is Grid)
@@ -940,40 +910,6 @@ namespace DiaryWorkouts
             }
         }
         
-        private void scrollBarWork_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            if (e.NewValue >= Math.Round(e.NewValue) && e.OldValue < Math.Round(e.NewValue)
-                || e.NewValue <= Math.Round(e.NewValue) && e.OldValue > Math.Round(e.NewValue))
-            {
-                ScrollWorks(e.NewValue, e.OldValue, WORK_STEP, scrollBarWork, gridWorks, gridWorkTemplate);
-            }
-            //gridWorks.Margin = new Thickness(gridWorks.Margin.Left, 
-            //                e.NewValue >= e.OldValue ? gridWorks.Margin.Top - WORK_STEP : gridWorks.Margin.Top + WORK_STEP, 
-            //                gridWorks.Margin.Right, 
-            //                gridWorks.Margin.Bottom);
-        }
-        private void scrollBarHardWork_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            if (e.NewValue >= Math.Round(e.NewValue) && e.OldValue < Math.Round(e.NewValue)
-                || e.NewValue <= Math.Round(e.NewValue) && e.OldValue > Math.Round(e.NewValue))
-            {
-                ScrollWorks(e.NewValue, e.OldValue, HARD_WORK_STEP, scrollBarHardWork, gridHardWorks, gridHardWorkTemplate);
-            }
-
-            //foreach (object ob in gridHardWorks.Children)
-            //{
-            //    if (ob is Grid)
-            //    {
-            //        if (((Grid)ob).Name.IndexOf(gridHardWorkTemplate.Name + "_") != -1)
-            //        {
-            //            ((Grid)ob).Margin = new Thickness(((Grid)ob).Margin.Left, 
-            //                e.NewValue >= e.OldValue ? ((Grid)ob).Margin.Top - HARD_WORK_SCROLL_STEP : ((Grid)ob).Margin.Top + HARD_WORK_SCROLL_STEP, 
-            //                ((Grid)ob).Margin.Right, 
-            //                ((Grid)ob).Margin.Bottom);
-            //        }
-            //    }
-            //}
-        }
         /// <summary>
         /// Смещает кардио работы вниз или вврех в зависимости от параметра
         /// </summary>
@@ -1051,12 +987,7 @@ namespace DiaryWorkouts
         {
             if (gridWorks != null)
             {
-                for (int i = 0; i < gridWorks.Children.Count; i++)
-                    if (gridWorks.Children[i] is Grid)
-                    {
-                        gridWorks.Children.Remove(gridWorks.Children[i]);
-                        i--;
-                    }
+                itemsControlKardioWorks.Items.Clear();
                 countWorks = 0;
             }
         }
@@ -1067,12 +998,7 @@ namespace DiaryWorkouts
         {
             if (gridHardWorks != null)
             {
-                for (int i = 0; i < gridHardWorks.Children.Count; i++)
-                    if (gridHardWorks.Children[i] is Grid)
-                    {
-                        gridHardWorks.Children.Remove(gridHardWorks.Children[i]);
-                        i--;
-                    }
+                itemsControlHardWorks.Items.Clear();
                 countHardWorks = 0;
             }
         }
@@ -1325,43 +1251,6 @@ namespace DiaryWorkouts
             }
         }
         #endregion
-
-        private void gridHardWorkTemplate_MouseWheel(object sender, MouseWheelEventArgs e)
-        {
-            if (e.Delta > 0)
-            {
-                ScrollWorks(scrollBarHardWork.Value + 1, scrollBarHardWork.Value, HARD_WORK_STEP, scrollBarHardWork, gridHardWorks, gridHardWorkTemplate);
-                if (scrollBarHardWork.Value + 1 <= scrollBarHardWork.Maximum)
-                    scrollBarHardWork.Value += 1;
-            }
-            else
-            {
-                ScrollWorks(scrollBarHardWork.Value - 1, scrollBarHardWork.Value, HARD_WORK_STEP, scrollBarHardWork, gridHardWorks, gridHardWorkTemplate);
-                if (scrollBarHardWork.Value - 1 >= scrollBarHardWork.Minimum)
-                    scrollBarHardWork.Value -= 1;
-            }
-            
-
-        }
-
-        private void gridWorkTemplate_MouseWheel(object sender, MouseWheelEventArgs e)
-        {
-            if (e.Delta > 0)
-            {
-                ScrollWorks(scrollBarWork.Value + 1, scrollBarWork.Value, WORK_STEP, scrollBarWork, gridWorks, gridWorkTemplate);
-                if (scrollBarWork.Value + 1 <= scrollBarWork.Maximum)
-                    scrollBarWork.Value += 1;
-            }
-            else
-            {
-                ScrollWorks(scrollBarWork.Value - 1, scrollBarWork.Value, WORK_STEP, scrollBarWork, gridWorks, gridWorkTemplate);
-                if (scrollBarWork.Value - 1 >= scrollBarWork.Minimum)
-                    scrollBarWork.Value -= 1;
-            }
-        }
-
-
-
 
     }
 }
