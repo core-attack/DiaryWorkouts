@@ -728,7 +728,7 @@ namespace DiaryWorkouts
             WorkoutPlan wp = sqlite.GetWorkoutPlan(sqlite.GetWorkoutPlanId(comboBoxWorkoutPlanTitle.Text));
             if (wp != null)
             {
-                List<Workout> workouts = sqlite.GetWorkouts(wp.id,
+                List<Workout> workouts = sqlite.GetWorkoutsFromWorkoutPlan(wp.id,
                     (short)sqlite.GetIdByValue(SQLite.TABLE_WORKOUT_PLAN_TYPE, comboBoxWorkoutPlanType.Text),
                     (short)sqlite.GetIdByValue(SQLite.TABLE_MUSCLES_GROUP, comboBoxWorkoutPlanMusclesGroup.Text));
                 foreach (Workout workout in workouts)
